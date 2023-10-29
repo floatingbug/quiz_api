@@ -4,6 +4,7 @@ function addQuiz({store}){
 			creator: "tom",
 		}
 		const result = await store.addQuiz(quizData);
+		console.log(result);
 
 		res.json(result);
 	}

@@ -22,7 +22,9 @@ async function addQuiz(quizData){
 }
 
 async function getQuiz({quizId}){
-	quizArray
+	const quiz = quizArray.find(quiz => quiz.id == quizId);
+
+	return quiz;
 }
 
 
