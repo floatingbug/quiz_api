@@ -5,6 +5,7 @@ function createStore(){
 	const store = {
 		addQuiz,
 		getQuiz,
+		isValidCredentials,
 	};
 
 	return store;
@@ -25,6 +26,10 @@ async function getQuiz({quizId}){
 	const quiz = quizArray.find(quiz => quiz.id == quizId);
 
 	return quiz;
+}
+
+async function isValidCredentials(user){
+
 }
 
 
