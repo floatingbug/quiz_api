@@ -6,6 +6,10 @@ const {getQuiz} = require("./src/routes/getQuiz");
 const {loginUser} = require("./src/routes/loginUser");
 
 function createApi({store}){
+	api.use("/", function(req, res, next){
+		console.log("request was made");
+		next()
+	});
 	api.use(bodyParser.json());
 	api.use("/login", validateUserInput);
 
