@@ -1,7 +1,7 @@
-function loginUser({store}){
+function loginUser({store, jwt}){
 	return async (req, res)=>{
-		const result = store.isValidCredentials(req.body);
-		res.send(result);
+		console.log(req.headers.authorization);
+		res.send(req.headers.authorization);
 	}
 }
 

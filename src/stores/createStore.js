@@ -13,14 +13,9 @@ function createStore(){
 		addQuiz,
 		getQuiz,
 		isValidCredentials,
-		boo,
 	};
 
 	return store;
-}
-
-function boo(){
-	console.log("boo");
 }
 
 function isValidCredentials(credentials){
