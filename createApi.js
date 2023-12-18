@@ -2,17 +2,22 @@ require("dotenv").config();
 const express = require("express");
 const api = express();
 const bodyParser = require("body-parser");
+const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const {checkUserAuthorization} = require("./checkUserAuthorization");
 const {validateUserInput} = require("./validateUserInput");
 const {addQuiz} = require("./src/routes/addQuiz");
 const {getQuiz} = require("./src/routes/getQuiz");
-const {registrateUser} = require("./src/routes/registrateUser");
+const {signUp} = require("./src/routes/signUp");
 const {loginUser} = require("./src/routes/loginUser");
 
 
 function createApi({store}){
 	api.use(bodyParser.json());
+	api.use(cors({
+		origin: true,
+		credentials: true
+	}));
 	
 	//validate user input
 	api.use("/", validateUserInput);
@@ -21,7 +26,7 @@ function createApi({store}){
 	api.use("/", checkUserAuthorization({jwt}));
 	
 	//routes
-	api.post("/registration", registrateUser({store, jwt}));
+	api.post("/sign-up", signUp({store}));
 	api.get("/add-quiz", addQuiz({store})); 
 	api.get("/get-quiz", getQuiz({store}));
 

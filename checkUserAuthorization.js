@@ -4,16 +4,17 @@ function checkUserAuthorization({jwt}){
 		const secret = process.env.JWT_SECRET;
 		const token = req.headers["authorization"];
 
-		//validation
+		//if user access secure ressource then validation else return next
 		if(req.path === "/add-quiz" && token){
 			decoded = await validateToken({jwt, token, secret});
 		}
 		else{
-			next();
+			return next();
 		}
 		
-		//if validation is successful, then proceed with the request
+		//if validation is successful, save user and proceed with the request
 		if(decoded){
+			req.user = decoded;
 			next();
 		}
 		else{

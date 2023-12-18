@@ -2,9 +2,10 @@ const {randomUUID} = require("crypto");
 const quizArray = [];
 const users = [
 	{
-		name: "tom",
-		email: "dia@blo.hell",
-		password: "k"
+		name: "testUser",
+		email: "testUser@test.de",
+		password: "test",
+		participating: []
 	}
 ]
 
@@ -13,9 +14,17 @@ function createStore(){
 		addQuiz,
 		getQuiz,
 		isValidCredentials,
+		isQuizExisting,
+		signUp,
 	};
 
 	return store;
+}
+
+async function signUp(credentials){
+	users.push(credentials);
+
+	return {success: true, message: "Please confirm your E-mail"};
 }
 
 function isValidCredentials(credentials){
@@ -29,10 +38,26 @@ function isValidCredentials(credentials){
 	return result;
 }
 
+function isQuizExisting(email){
+	let isQuizExists = false;
+
+	isQuizExists = quizArray.find(
+		(quiz)=>{
+			if(quiz.email === email){
+				return true;
+			}
+		}
+	);
+
+	return isQuizExists;
+}
+
 async function addQuiz(quizData){
 	const quiz = {
 		id: randomUUID(),
 		creator: quizData.creator,
+		email: quizData.email,
+		participants: []
 	}
 
 	quizArray.push(quiz)
