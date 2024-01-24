@@ -1,0 +1,186 @@
+{
+  "main": {
+    "id": "ef4df5472344d8d6",
+    "type": "split",
+    "children": [
+      {
+        "id": "8e340d0e6c4863b0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3ef547b4fa4ed840",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2d483c31e6da55a9",
+    "type": "split",
+    "children": [
+      {
+        "id": "6767009aa225e9bc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "002391520bdbb4b1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "55562595403884d5",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e0e9ba54e94a06e9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f4a7c7c1b0a7eb6a",
+    "type": "split",
+    "children": [
+      {
+        "id": "2353ac0c0c3b1e41",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e602bfeb0734f0e2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e3fb105f906c939b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0a7972444d61f2a6",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "72fd5ca680372a42",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "3ef547b4fa4ed840",
+  "lastOpenFiles": [
+    "src/stores/createStore.js~",
+    "src/routes/getAllQuizzes.js~",
+    "createApi.js~",
+    "src/routes/getAllQuizzes.js",
+    "src/routes/getQuiz.js~",
+    "src/routes/addQuiz.js~",
+    "checkUserAuthorization.js~",
+    "api_test/api_tests.sh~",
+    "src/routes/signIn.js~",
+    "node_modules/bson/vendor/base64/LICENSE-MIT.txt",
+    "node_modules/bson/src/utils/web_byte_utils.ts",
+    "node_modules/bson/vendor/text-encoding/README.md",
+    "node_modules/bson/vendor/base64/README.md",
+    "node_modules/bson/README.md",
+    "node_modules/bson/vendor/text-encoding/LICENSE.md",
+    "node_modules/bson/LICENSE.md",
+    "node_modules/mongodb/README.md",
+    "node_modules/mongodb/LICENSE.md",
+    "node_modules/@types/webidl-conversions/README.md",
+    "node_modules/whatwg-url/README.md",
+    "node_modules/@types/whatwg-url/README.md",
+    "node_modules/sparse-bitfield/README.md",
+    "node_modules/@mongodb-js/saslprep/readme.md",
+    "node_modules/tr46/README.md",
+    "node_modules/tr46/LICENSE.md",
+    "node_modules/mongodb-connection-string-url/README.md",
+    "node_modules/memory-pager/README.md",
+    "node_modules/webidl-conversions/README.md",
+    "node_modules/webidl-conversions/LICENSE.md",
+    "node_modules/punycode/README.md",
+    "README.md",
+    "Untitled.canvas",
+    "node_modules/serve-static/README.md",
+    "node_modules/qs/CHANGELOG.md"
+  ]
+}
