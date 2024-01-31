@@ -13,7 +13,7 @@ async function handleRequest(store, req, res){
 				return res.json({success: false, msg:"Confirm e-mail failed"});
 			}
 		
-			return res.json({success: true, msg:"E-mail has been successfully confirmed"});
+			return res.redirect(process.env.SERVER_URL);
 		}
 		catch(err){
 			return res.json({success: false, msg: err});

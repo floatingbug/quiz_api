@@ -12,6 +12,7 @@ const {signIn} = require("./src/routes/signIn");
 const {confirmEmail} = require("./src/routes/confirmEmail");
 const {getAllQuizzes} = require("./src/routes/getAllQuizzes");
 const {guessAnswers} = require("./src/routes/guessAnswers");
+const {getGuessedAnswers} = require("./src/routes/getGuessedAnswers");
 
 
 function createApi({store}){
@@ -20,6 +21,7 @@ function createApi({store}){
 		origin: true,
 		credentials: true
 	}));
+	api.use(express.static("public"));
 	
 	//validate user input
 	api.use("/", validateUserInput);
@@ -34,7 +36,8 @@ function createApi({store}){
 	api.post("/add-quiz", addQuiz({store})); 
 	api.get("/get-quiz", getQuiz({store}));
 	api.get("/get-all-quizzes", getAllQuizzes({store}));
-	api.get("/guess-answers", guessAnswers({store}));
+	api.post("/guess-answers", guessAnswers({store}));
+	api.get("/get-guessed-answers", getGuessedAnswers({store}));
 
 	return api;
 }

@@ -6,9 +6,9 @@ function signUp({store}){
 
 async function handleRequest(store, req, res){
 	const credentials = {
-		name: req.body.name,
-		email: req.body.email,
-		password: req.body.password
+		name: req.body.name.replace(/\s/g, ""),
+		email: req.body.email.replace(/\s/g, ""),
+		password: req.body.password.replace(/\s/g, "")
 	};
 
 	//check if user allready exists in db

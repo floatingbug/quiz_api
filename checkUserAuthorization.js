@@ -8,7 +8,13 @@ function checkUserAuthorization({jwt}){
 		switch(req.path){
 			case "/add-quiz": decoded = await validateToken({jwt, token, secret});
 				break;
+			case "/get-quiz": decoded = await validateToken({jwt, token, secret});
+				break;
 			case "/get-all-quizzes": decoded = await validateToken({jwt, token, secret});
+				break;
+			case "/guess-answers": decoded = await validateToken({jwt, token, secret});
+				break;
+			case "/get-guessed-answers": decoded = await validateToken({jwt, token, secret});
 				break;
 			default: return next();
 		}

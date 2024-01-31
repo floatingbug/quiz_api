@@ -18,6 +18,8 @@ function createStore(){
 		countQuizzes,
 		getQuiz,
 		getAllQuizzes,
+		guessAnswers,
+		getGuessedAnswers,
 		printError,
 	};
 
@@ -173,6 +175,48 @@ async function getAllQuizzes(userID){
 			quizzes.push(doc); 
 		}
 		return quizzes;
+	}
+	catch(err){
+		printError(err);
+		throw new Error(this.SERVER_ERROR);
+	}
+	finally{
+		await this.client.close();
+	}
+}
+
+async function guessAnswers(quizTitle, quizOwner, quizID, guesserName, guesserID, guessedAnswers, answers){
+	const collGuessAnswers = this.guessMate.collection("guessedAnswers");
+	const doc = {
+		quizOwner,
+		guesserID,
+		quizID,
+		guesserName,
+		guessedAnswers,
+		answers,
+		quizTitle,
+	}
+
+	try{
+		await this.client.connect();
+		return await collGuessAnswers.insertOne(doc);
+	}
+	catch(err){
+		printError(err);
+		throw new Error(this.SERVER_ERROR);
+	}
+	finally{
+		await this.client.close();
+	}
+}
+
+async function getGuessedAnswers(){
+	const collGuessAnswers = this.guessMate.collection("guessedAnswers");
+
+	try{
+		await this.client.connect();
+		const result = await collGuessAnswers.find();
+		return await result.toArray();
 	}
 	catch(err){
 		printError(err);

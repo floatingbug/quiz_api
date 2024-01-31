@@ -30,10 +30,13 @@ function validateSignIn(req){
 
 function validateSignUp(req){
 	if(!req.body){
-		return true;
+		return false;
 	}
 	if(!req.body.name || !req.body.email || !req.body.password){
-		return true;
+		return false;
+	}
+	if(typeof req.body.name != "string" || typeof req.body.email != "string" || typeof req.body.password != "string"){
+		return false
 	}
 
 	return true;
