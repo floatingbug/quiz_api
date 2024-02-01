@@ -3,6 +3,7 @@ function checkUserAuthorization({jwt}){
 		const secret = process.env.JWT_KEY;
 		const token = req.headers["authorization"];
 		let decoded = null;
+		console.log("------------->", token)
 
 		//if user access secure ressource then validation else return next
 		switch(req.path){

@@ -1,6 +1,7 @@
 const express = require("express");
 const api = express();
 const bodyParser = require("body-parser");
+const path = require("path");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const {checkUserAuthorization} = require("./checkUserAuthorization");
@@ -22,7 +23,7 @@ function createApi({store}){
 		credentials: true
 	}));
 	api.use(express.static("public"));
-	
+
 	//validate user input
 	api.use("/", validateUserInput);
 
